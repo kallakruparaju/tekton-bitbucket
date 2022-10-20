@@ -1,0 +1,54 @@
+{
+  "actor": {
+    "username": "myusername",
+    "displayName": "My User Name",
+    "emailAddress": "myuser@cloudbees.com"
+  },
+  "repository": {
+    "scmId": "git",
+    "project": {
+      "key": "WEB",
+      "name": "webhook"
+    },
+    "slug": "simple-java-maven-app",
+    "links": {
+      "self": [
+        {
+          "href": "https://localhost:7990/projects/WEB/repos/simple-java-maven-app/browse"
+        }
+      ]
+    },
+    "ownerName": "WEB",
+    "public": false,
+    "fullName": "WEB/simple-java-maven-app",
+    "owner": {
+      "username": "WEB",
+      "displayName": "WEB",
+      "emailAddress": null
+    }
+  },
+  "push": {
+    "changes": [
+      {
+        "created": false,
+        "closed": false,
+        "new": {
+          "type": "branch",
+          "name": "main",
+          "target": {
+            "type": "commit",
+            "hash": "b7c6fa5e437beb9dba60993f326ea26c4be6eca8"
+          }
+        },
+        "old": {
+          "type": "branch",
+          "name": "main",
+          "target": {
+            "type": "commit",
+            "hash": "f690661139936373bb0c4a1f2534cc5cfceb0707"
+          }
+        }
+      }
+    ]
+  }
+}

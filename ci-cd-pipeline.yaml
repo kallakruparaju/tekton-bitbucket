@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: ci-cd-pipeline
+spec:
+  tasks:
+    - name: test
+      taskRef:
+        name: test
+    - name: build
+      runAfter:
+        - test
+      taskRef:
+        name: build
+    - name: prod
+      runAfter:
+        - build
+      taskRef:
+        name: prod

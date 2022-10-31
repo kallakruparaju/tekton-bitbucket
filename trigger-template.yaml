@@ -1,0 +1,18 @@
+apiVersion: triggers.tekton.dev/v1beta1
+kind: TriggerTemplate
+metadata:
+  name: bitbucket-template
+spec:
+  params:
+    - name: username
+  resourcetemplates:	
+    - apiVersion: tekton.dev/v1beta1
+      kind: PipelineRun
+      metadata:
+        generateName: ci-cd-pipeline-run-
+      spec:
+        pipelineRef:
+          name: ci-cd-pipeline
+        params:
+          - name: username
+            value: $(tt.params.username)

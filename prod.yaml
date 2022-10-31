@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: prod
+spec:
+  steps:
+    - name: prod
+      image: ubuntu
+      script: |
+        #!/bin/bash
+        echo "deployed"
